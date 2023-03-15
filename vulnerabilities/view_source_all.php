@@ -11,7 +11,6 @@ $page[ 'title' ] = 'Source' . $page[ 'title_separator' ].$page[ 'title' ];
 if (array_key_exists ("id", $_GET)) {
 	$id = $_GET[ 'id' ];
 
-	// file deepcode ignore PT: <please specify a reason of ignoring this>
 //  deepcode ignore Ssrf: <please specify a reason of ignoring this>
  $lowsrc = @file_get_contents("./{$id}/source/low.php");
 	$lowsrc = str_replace( array( '$html .=' ), array( 'echo' ), $lowsrc);
