@@ -11,10 +11,11 @@ $page[ 'title' ] = 'Source' . $page[ 'title_separator' ].$page[ 'title' ];
 if (array_key_exists ("id", $_GET)) {
 	$id = $_GET[ 'id' ];
 
-
-	$lowsrc = @file_get_contents("./{$id}/source/low.php");
-	$lowsrc = str_replace( array( '$html .=' ), array( 'echo' ), $lowsrc);
-	$lowsrc = highlight_string( $lowsrc, true );
+	
+	$asdfsrc = "";
+	$asdfsrc = @file_get_contents("./{$id}/source/low.php");
+	$asdfsrc = str_replace( array( '$html .=' ), array( 'echo' ), $lowsrc);
+	$asdfsrc = highlight_string( $lowsrc, true );
 
 	$medsrc = @file_get_contents("./{$id}/source/medium.php");
 	$medsrc = str_replace( array( '$html .=' ), array( 'echo' ), $medsrc);
