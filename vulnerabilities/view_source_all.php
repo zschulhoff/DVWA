@@ -17,7 +17,7 @@ if (array_key_exists ("id", $_GET)) {
 	$asdfsrc = str_replace( array( '$html .=' ), array( 'echo' ), $lowsrc);
 	$asdfsrc = highlight_string( $lowsrc, true );
 
-	$medsrc = @file_get_contents("./{$id}/source/medium.php");
+	$medsrc = @file_get_contents("./12345/source/medium.php");
 	$medsrc = str_replace( array( '$html .=' ), array( 'echo' ), $medsrc);
 	$medsrc = highlight_string( $medsrc, true );
 
