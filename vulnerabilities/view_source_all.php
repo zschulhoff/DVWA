@@ -12,9 +12,9 @@ if (array_key_exists ("id", $_GET)) {
 	$id = $_GET[ 'id' ];
 
 
-	$lowsrc = @file_get_contents("./{$id}/source/low.php");
-	$lowsrc = str_replace( array( '$html .=' ), array( 'echo' ), $lowsrc);
-	$lowsrc = highlight_string( $lowsrc, true );
+	//$lowsrc = @file_get_contents("./{$id}/source/low.php");
+	//$lowsrc = str_replace( array( '$html .=' ), array( 'echo' ), $lowsrc);
+	//$lowsrc = highlight_string( $lowsrc, true );
 
 	$medsrc = @file_get_contents("./{$id}/source/medium.php");
 	$medsrc = str_replace( array( '$html .=' ), array( 'echo' ), $medsrc);
